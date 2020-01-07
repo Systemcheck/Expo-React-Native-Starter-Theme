@@ -4,9 +4,10 @@
 
 ---
 
-[![GitHub version](https://badge.fury.io/gh/Systemcheck%2FExpo-React-Native-Starter-Theme.svg)](https://badge.fury.io/gh/Systemcheck%2FExpo-React-Native-Starter-Theme)
+[![GitHub version](https://badge.fury.io/gh/Systemcheck/Expo-React-Native-Starter-Theme.svg)](https://badge.fury.io/gh/Systemcheck/Expo-React-Native-Starter-Theme)
 [![Dependency Status](https://david-dm.org/Systemcheck/Expo-React-Native-Starter-Theme.svg)](https://david-dm.org/Systemcheck/Expo-React-Native-Starter-Theme.svg)
 [![Stack Share](http://img.shields.io/badge/tech-expo-0690fa.svg?style=flat)](https://stackshare.io/boadude/react-native-expo-starter)
+[![Stack Share](http://img.shields.io/badge/tech-react-native-0690fa.svg?style=flat)](https://stackshare.io/boadude/react-native-expo-starter)
 [![Build Status](https://travis-ci.com/Systemcheck/Expo-React-Native-Starter-Theme.svg?branch=master)](https://travis-ci.com/Systemcheck/Expo-React-Native-Starter-Theme.svg)
 This repository will help you to start your fresh new React Native project with Expo using the best practices to accelerate you coding.
 
@@ -39,7 +40,7 @@ This repository will help you to start your fresh new React Native project with 
 # Clone the repository
 git clone --depth 1 https://github.com/Systemcheck/Expo-React-Native-Starter-Theme.git
 
-# Go to React-Native-Expo-Starter directory
+# Go to Expo-React-Native-Starter-Theme directory
 cd Expo-React-Native-Starter-Theme
 
 # Install dependecies
@@ -50,8 +51,6 @@ npm start
 ```
 
 Now, open Expo app on your Android or iPhone phone and scan the QR Code or go to the exp url. If you want you can start a device simulator, just follow the instructions in your console.
-
-<img  alt="Expo starter" src="https://raw.githubusercontent.com/boadude/React-Native-Expo-Starter/master/docs/expo-console.png" class="img-responsive">
 
 # Configuration
 
@@ -113,21 +112,15 @@ react-native-expo-starter/
  │       └──errors.js              * custom errors messages
  │
  │
- ├──.babelrc                       * configuration for module-resolver and babel
  ├──.editorconfig                  * configuration for vscode
- ├──.eslintrc                      * configuration for eslint
- ├──.flowconfig                    * configuration for flow
  ├──App.js                         * initial configuration for start the project
  ├──app.json                       * configuration por expo
- ├──jsconfig.json                  * configuration for compiler
  └──package.json                   * what npm uses to manage its dependencies
 ```
 
 # Support
 
 > Contact me anytime if you need help
-
-* [Twitter: @boadude](https://twitter.com/boadude)
 
 # License
 
