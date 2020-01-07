@@ -1,9 +1,9 @@
 {
   "name": "expo-starter-free",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Expo Starter App with Navigation, Gallery, Calendar...",
-  "author": null,
-  "private": true,
+  "author": "Systemcheck",
+  "private": false,
   "main": "node_modules/expo/AppEntry.js",
   "devDependencies": {
     "babel-preset-expo": "^7.0.0",
