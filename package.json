@@ -6,7 +6,9 @@
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "devDependencies": {
-    "babel-preset-expo": "^7.0.0"
+    "babel-preset-expo": "^7.0.0",
+    "jest-expo": "^36.0.1",
+    "react-test-renderer": "^16.12.0"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
@@ -44,5 +46,11 @@
     "redux-logger": "3.0.6",
     "redux-persist": "6.0.0",
     "redux-thunk": "2.3.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-expo"
   }
 }
