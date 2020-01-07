@@ -12,7 +12,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/Systemcheck/Expo-React-Native-Starter-Theme)](https://github.com/Systemcheck/Expo-React-Native-Starter-Theme/issues)
 [![GitHub license](https://img.shields.io/github/license/Systemcheck/Expo-React-Native-Starter-Theme)](https://github.com/Systemcheck/Expo-React-Native-Starter-Theme/blob/master/LICENSE)
 
-![React Native Starter](https://i.imgur.com/vcz4bU6.png)
+![React Native Starter](https://raw.githubusercontent.com/Systemcheck/Expo-React-Native-Starter-Theme/master/assets/smartphone.jpg)
 <p>
 This repository will help you to start your fresh new React Native project with Expo using the best practices to accelerate you coding.
 </p>
