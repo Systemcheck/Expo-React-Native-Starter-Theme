@@ -12,8 +12,8 @@
 [![GitHub issues](https://img.shields.io/github/issues/Systemcheck/Expo-React-Native-Starter-Theme)](https://github.com/Systemcheck/Expo-React-Native-Starter-Theme/issues)
 [![GitHub license](https://img.shields.io/github/license/Systemcheck/Expo-React-Native-Starter-Theme)](https://github.com/Systemcheck/Expo-React-Native-Starter-Theme/blob/master/LICENSE)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Systemcheck/Expo-React-Native-Starter-Theme/master/assets/smartphone.jpg" height="350" title="ERNST">
-  <img src="https://raw.githubusercontent.com/Systemcheck/Expo-React-Native-Starter-Theme/master/assets/smartphone.jpg" height="350" title="ERNST">
+  <img src="https://raw.githubusercontent.com/Systemcheck/Expo-React-Native-Starter-Theme/master/assets/examples/home.jpg" height="350" title="ERNST">
+  <img src="https://raw.githubusercontent.com/Systemcheck/Expo-React-Native-Starter-Theme/master/assets/calendar.png" height="350" title="ERNST">
   
 </p>
 
