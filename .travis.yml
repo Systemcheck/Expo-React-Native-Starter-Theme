@@ -11,7 +11,7 @@ before_script:
   - npm install -g npm@latest
 script:
   - npm ci
-  - npx jest --ci
+  - npx jest --passWithNoTests
 jobs:
   include:
     - stage: deploy
