@@ -25,7 +25,7 @@ This repository will help you to start your fresh new React Native project with 
 
 # Table of contents
 
-* [Instalation](#instalation)
+* [Installation](#instalation)
 * [Configuration](#configuration)
   * [Visual Studio Code](#visual-studio-code)
   * [Add-ons](#add-ons)
@@ -41,10 +41,10 @@ This repository will help you to start your fresh new React Native project with 
 
 ```bash
 # Clone the repository
-git clone --depth 1 https://github.com/Systemcheck/Expo-React-Native-Starter-Theme.git
+git clone --depth 1 https://github.com/Systemcheck/Expo-React-Native-Starter-Theme.git expo-starter
 
 # Go to Expo-React-Native-Starter-Theme directory
-cd Expo-React-Native-Starter-Theme
+cd expo-starter
 
 # Install dependecies
 npm install
