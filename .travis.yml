@@ -1,4 +1,12 @@
-sudo: false
 language: node_js
 node_js:
-  - "stable"
+  - node
+  - lts/*
+cache:
+  directories:
+    - ~/.npm
+before_script:
+  - npm install -g npm@latest
+script:
+  - npm ci
+  - npx jest --ci
