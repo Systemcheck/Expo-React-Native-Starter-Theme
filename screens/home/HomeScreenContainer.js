@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {
   View,
-  
-  Button,
   TextInput,
   Image,
   StyleSheet,
@@ -19,97 +17,18 @@ import {
   MaterialIcons,
 } from '@expo/vector-icons';
 import { Text } from '../../components/StyledText';
+import { Button } from '../../src/components';
 import { colors, fonts } from '../../styles/index';
 import * as Font from 'expo-font';
-
-const buttons = [
-  {
-    icon: (
-      <Entypo
-        raised
-        name="air"
-        type={'entypo'}
-        style={{ paddingTop: 3, fontSize: 20 }}
-        color="#fff"
-      />
-    ),
-    title: 'Drinking Fountains',
-    description: 'Please rate your drink...',
-    text: 'Stay Rehydrate, Stop the Plastic',
-    url: '/drinking_fountains/query?q=DIVISION:*&rows=1000',
-  },
-  {
-    icon: (
-      <View style={{ flexDirection: 'row' }}>
-        <Ionicons
-          raised
-          name="md-man"
-          style={{ paddingTop: 3, fontSize: 20 }}
-          color="#fff"
-        />
-        <Ionicons
-          raised
-          name="md-woman"
-          style={{ paddingTop: 3, paddingLeft: 2, fontSize: 20 }}
-          color="#fff"
-        />
-      </View>
-    ),
-    title: 'Toilets & BBQs',
-    text: 'Family Friendly Places to Go',
-    description: 'Please rate your experience...',
-  },
-  {
-    icon: (
-      <View style={{ flexDirection: 'row' }}>
-        <Ionicons
-          raised
-          name="ios-tennisball"
-          style={{ paddingTop: 3, fontSize: 20 }}
-          color="#fff"
-        />
-      </View>
-    ),
-    title: 'Sports',
-    text: 'Tennis, Basketball, Badminton',
-    description: 'Please rate this facility...',
-  },
-  {
-    icon: (
-      <View style={{ flexDirection: 'row' }}>
-        <MaterialCommunityIcons
-          raised
-          name="recycle"
-          style={{ paddingTop: 3, fontSize: 20 }}
-          color="#fff"
-        />
-      </View>
-    ),
-    title: 'Recycling',
-    text: 'Batteries, Lightbulbs, Soft Plastics',
-    description: 'Please rate this facility...',
-  },
-];
-
-const styles2 = StyleSheet.create({
-  MainContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    opacity: 0.8,
-    top: -60,
-    height: '112%',
-    position: 'absolute',
-  },
-});
 
 export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      fontLoaded: false
+      fontLoaded: false,
+      extended: true, 
+      isReady: false
     } 
   }
 
@@ -122,16 +41,12 @@ export default class HomeScreen extends Component {
     setTimeout(() => {
       // Call animation method prior to state change
       LayoutAnimation.spring();
-      this.setState({ buttons });
-    }, 500);
+      
     this.setState({ fontLoaded: true });
-  }
-  state = {
-    buttons: [],
-    extended: true, 
-    isReady: false
-  };
+  })
 
+}
+ 
   render() {
     let {
       navigation: { navigate },
@@ -143,8 +58,8 @@ export default class HomeScreen extends Component {
       <View style={styles.container}>
         { !this.state.fontLoaded ?  null :  
         <ImageBackground
-          source={require('../../assets/images/bg5.jpg')}
-          style={styles2.MainContainer}
+          source={colors.bg}
+          style={styles.MainContainer}
           resizeMode="cover"
         > 
         
@@ -171,7 +86,7 @@ export default class HomeScreen extends Component {
         </View>
 
         <View style={[styles.section, styles.sectionLarge]}>
-          <Text color="#19e7f7" hCenter size={15} >
+          <Text color={colors.primaryLight} secondary hCenter size={15} >
             {' '}
             A powerful starter project that bootstraps development of your
             mobile application and saves you $20 000*
@@ -199,12 +114,15 @@ export default class HomeScreen extends Component {
           </View>
         </View>
         <View style={styles.section}>
-          <TouchableHighlight
-            style={styles.submit}
-            onPress={() => this.props.navigation.navigate('Pages')}
-            underlayColor='#fff'>
-            <Text white >View Pages</Text>
-          </TouchableHighlight>
+        <Button
+          large
+          secondary
+          
+          rounded
+          style={styles.button}
+          caption="View all Pages"
+          onPress={() => this.props.navigation.navigate('Pages')}
+        />
         </View>
       
        </ImageBackground>   
@@ -216,6 +134,16 @@ export default class HomeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  MainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    opacity: 0.8,
+    top: -70,
+    height: '112%',
+    position: 'absolute',
+  },
   container: {
     flex: 1,
     alignItems: 'center',

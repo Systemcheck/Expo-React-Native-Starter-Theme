@@ -8,8 +8,9 @@ import HomeScreen  from '../screens/home/HomeScreenContainer';
 import GalleryScreen from '../screens/gallery/GalleryViewContainer';
 import CalendarScreen from '../src/modules/calendar/CalendarViewContainer';
 import PagesScreen from '../src/modules/pages/PagesViewContainer';
-import AvailableInFullVersion from '../src/modules/availableInFullVersion/AvailableInFullVersionViewContainer';
-const headerBackground = require('../assets/images/topBarBg.png');
+import AvailableInFullVersion from '../screens/proVersion/ProVersionViewContainer';
+
+const headerBackground = require('../assets/images/topBarBlueBg.png');
 const HomeStack = createStackNavigator({
   cstack:  {
     screen: HomeScreen,
@@ -39,7 +40,6 @@ const HomeStack = createStackNavigator({
 });
 HomeStack.navigationOptions = ({ navigation }) => {
   let tabBarVisible = true;
-  console.log(navigation.state.index);
   if (navigation.state.index == 0) {
     tabBarVisible = false;
   }

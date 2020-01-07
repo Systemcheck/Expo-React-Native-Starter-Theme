@@ -8,11 +8,12 @@ import {
   Linking,
 } from 'react-native';
 
-import { fonts, colors } from '../../../styles';
-import { Button } from '../../components';
+import { fonts, colors } from '../../styles';
+import { Button } from '../../src/components';
 import * as Font from 'expo-font';
 
 export default function AvailableInFullVersionScreen(props) {
+  
   const rnsUrl = 'https://reactnativestarter.com';
   const handleClick = () => {
     Linking.canOpenURL(rnsUrl).then(supported => {
@@ -25,19 +26,18 @@ export default function AvailableInFullVersionScreen(props) {
   };
   return (
     <ImageBackground
-      source={require('../../../assets/images/background.png')}
+      source={colors.bg}
       style={styles.container}
     >
       <Image
-        source={require('../../../assets/images/RNS_nerd.png')}
+        source={require('../../assets/images/RNS_nerd.png')}
         style={styles.nerdImage}
       />
 
       <View style={styles.textContainer}>
-      <Text style={styles.availableText}>-</Text>
         <Text style={styles.availableText}>Available</Text>
         <Text style={styles.availableText}>in</Text>
-        <Text style={styles.availableText}>Full Version</Text>
+        <Text style={styles.availableText}>Pro Version</Text>
       </View>
 
       <View style={styles.buttonsContainer}>
@@ -48,7 +48,7 @@ export default function AvailableInFullVersionScreen(props) {
           rounded
           style={styles.button}
           caption="Purchase Now"
-          onPress={() => handleClick()}
+          onPress={() => props.navigation.goBack()}
         />
 
         <Button

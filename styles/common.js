@@ -2,6 +2,7 @@ import { StyleSheet, StatusBar, Platform } from 'react-native';
 
 import colors from './colors';
 
+console.log(colors);
 export default StyleSheet.create({
   safeArea: {
     flex: 1,
