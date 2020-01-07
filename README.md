@@ -7,12 +7,9 @@
 [![GitHub version](https://badge.fury.io/gh/Systemcheck%2FExpo-React-Native-Starter-Theme.svg)](https://badge.fury.io/gh/Systemcheck%2FExpo-React-Native-Starter-Theme)
 [![Dependency Status](https://david-dm.org/Systemcheck/Expo-React-Native-Starter-Theme.svg)](https://david-dm.org/Systemcheck/Expo-React-Native-Starter-Theme.svg)
 [![Stack Share](http://img.shields.io/badge/tech-expo-0690fa.svg?style=flat)](https://stackshare.io/boadude/react-native-expo-starter)
-[![Stack Share2](https://img.shields.io/badge/tech-react--native-blue?style=flat)](https://stackshare.io/boadude/react-native-expo-starter)
-
+[![Stack Share2](https://img.shields.io/badge/tech-react--native-orange?style=flat)](https://stackshare.io/boadude/react-native-expo-starter)
 [![Build Status](https://travis-ci.com/Systemcheck/Expo-React-Native-Starter-Theme.svg?branch=master)](https://travis-ci.com/Systemcheck/Expo-React-Native-Starter-Theme.svg)
-
 [![GitHub issues](https://img.shields.io/github/issues/Systemcheck/Expo-React-Native-Starter-Theme)](https://github.com/Systemcheck/Expo-React-Native-Starter-Theme/issues)
-
 [![GitHub license](https://img.shields.io/github/license/Systemcheck/Expo-React-Native-Starter-Theme)](https://github.com/Systemcheck/Expo-React-Native-Starter-Theme/blob/master/LICENSE)
 <p>
 This repository will help you to start your fresh new React Native project with Expo using the best practices to accelerate you coding.
