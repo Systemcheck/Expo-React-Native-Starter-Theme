@@ -5,7 +5,7 @@
 ---
 
 [![GitHub version](https://badge.fury.io/gh/boadude%2FReact-Native-Expo-Starter.svg)](https://badge.fury.io/gh/boadude%2FReact-Native-Expo-Starter)
-[![Dependency Status](https://david-dm.org/boadude/React-Native-Expo-Starter.svg)](https://david-dm.org/boadude/React-Native-Expo-Starter.svg)
+[![Dependency Status](https://david-dm.org/Systemcheck/Expo-React-Native-Starter-Theme.svg)](https://david-dm.org/Systemcheck/Expo-React-Native-Starter-Theme.svg)
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/boadude/react-native-expo-starter)
 
 This repository will help you to start your fresh new React Native project with Expo using the best practices to accelerate you coding.
