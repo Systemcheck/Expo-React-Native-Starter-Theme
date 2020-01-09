@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { Agenda } from 'react-native-calendars';
 
-import { colors, fonts } from '../../../styles/index';
+import { colors, fonts } from '../../styles/index';
 import * as Font from 'expo-font';
 
 class CalendarScreen extends React.Component {
@@ -17,8 +17,8 @@ class CalendarScreen extends React.Component {
 
   componentDidMount = async() => {
     await Font.loadAsync({
-      'Lato-Regular': require('../../../assets/fonts/Lato-Regular.ttf'),
-      'Lato-Bold': require('../../../assets/fonts/Lato-Bold.ttf'),
+      'Lato-Regular': require('../../assets/fonts/Lato-Regular.ttf'),
+      'Lato-Bold': require('../../assets/fonts/Lato-Bold.ttf'),
     });
 
     this.setState({ fontLoaded: true });

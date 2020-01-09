@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
 // ## Generator Reducer Imports
-import gallery from '../modules/gallery/GalleryState';
-import app from '../modules/AppState';
-import calendar from '../modules/calendar/CalendarState';
+import gallery from '../../screens/gallery/GalleryState';
+import app from '../../screens/AppState';
+import calendar from '../../screens/calendar/CalendarState';
 
 export default combineReducers({
   // ## Generator Reducers

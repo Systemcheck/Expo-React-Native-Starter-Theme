@@ -8,6 +8,8 @@ const colorScheme = {
     primaryGradientEnd: '#4f44b6',
     secondaryGradientStart: '#FF1358',
     secondaryGradientEnd: '#c8023c',
+    goldGradientStart: '#e2b007',
+    goldGradientEnd: '#b78e03',
     profileGradientStart: '#54CBF6',
     profileGradientEnd: '#49D2D0',
     secondary: '#FF1358',
@@ -19,6 +21,7 @@ const colorScheme = {
     blue: '#5A81F7',
     bluish: '#F1F1F7',
     black: '#000000',
+    gold: '#e2b007',
     green: '#6DD0A3',
     yellow: '#ffc247',
     bg: require('../assets/images/bgblue.jpg')

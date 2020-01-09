@@ -6,11 +6,41 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Image } from 'react-native';
 import HomeScreen  from '../screens/home/HomeScreenContainer';
 import GalleryScreen from '../screens/gallery/GalleryViewContainer';
-import CalendarScreen from '../src/modules/calendar/CalendarViewContainer';
-import PagesScreen from '../src/modules/pages/PagesViewContainer';
+import CalendarScreen from '../screens/calendar/CalendarViewContainer';
+import GridScreen from '../screens/grid/GridViewContainer'; 
+import ComponentsScreen from '../screens/components/ComponentsViewContainer'; 
+import PagesScreen from '../screens/pages/PagesViewContainer';
+import ProfileScreen from '../screens/profile/ProfileViewContainer'; //Pro Version,
+import DevVersionScreen from '../screens/devVersion/DevVersionViewContainer';
 import AvailableInFullVersion from '../screens/proVersion/ProVersionViewContainer';
 
 const headerBackground = require('../assets/images/topBarBlueBg.png');
+
+//default navigationoptions 
+const navigationoptions = { 
+  defaultNavigationOptions: {
+  headerStyle: {
+    backgroundColor: 'blue',
+    borderBottomWidth: 0,
+  },
+  
+  headerBackground: () => (
+    <Image
+      style={{ flex: 1 }}
+      source={headerBackground}
+      resizeMode="cover"
+    />
+  ),
+  headerTintColor: 'white',
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    },
+  }
+}
+
+
+//ALL Stacks
+//1.st Single Screen Stacks (used in PagesStack and TabNavigator)
 const HomeStack = createStackNavigator({
   cstack:  {
     screen: HomeScreen,
@@ -48,6 +78,16 @@ HomeStack.navigationOptions = ({ navigation }) => {
     tabBarVisible,
   };
 };
+
+const GalleryStack = createStackNavigator({
+  gstack:  {
+    screen: GalleryScreen,
+    navigationOptions: {
+      title: 'Kalender',
+      }
+    },
+  }, { navigationoptions }); //to change edit default 'const navigationsoptions' at top
+
 const CalendarStack = createStackNavigator({
   cstack:  {
     screen: CalendarScreen,
@@ -55,27 +95,28 @@ const CalendarStack = createStackNavigator({
       title: 'Kalender',
       }
     },
-  }, {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: 'blue',
-        borderBottomWidth: 0,
-      },
-      
-      headerBackground: () => (
-        <Image
-          style={{ flex: 1 }}
-          source={headerBackground}
-          resizeMode="cover"
-        />
-      ),
-      headerTintColor: 'white',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-        },
-    },
-});
+  }, { navigationoptions }); //to change edit default 'const navigationsoptions' at top
 
+const GridStack = createStackNavigator({
+  gstack:  {
+    screen: GridScreen,
+    navigationOptions: {
+      title: 'Grid',
+      }
+    },
+  }, { navigationoptions }); //to change edit default 'const navigationsoptions' at top
+
+const ComponentsStack = createStackNavigator({
+  componentstack:  {
+    screen: ComponentsScreen,
+    navigationOptions: {
+      title: 'Components',
+      }
+    },
+  }, { navigationoptions }); //to change edit default 'const navigationsoptions' at top
+//End Single Screen Stacks
+
+//Start PagesStack with child Stacks
 const PagesStack = createStackNavigator({
   Overview:  {
     screen: PagesScreen,
@@ -83,19 +124,45 @@ const PagesStack = createStackNavigator({
       title: 'Pages',
       }
     },
-  Charts: {
-    screen: AvailableInFullVersion,
+  GalleryView: {
+    screen: GalleryScreen,
     navigationOptions: {
-      title: 'Charts',
+    title: 'Gallery',
+    }
+  },
+  CalendarView: {
+      screen: CalendarScreen,
+      navigationOptions: {
+        title: 'Calendar',
       }
     },
-  Calendar: {
-    screen: CalendarScreen,
+  
+  GridView: {
+    screen: GridScreen,
     navigationOptions: {
       title: 'Calendar',
+    }
+  },
+  ComponentsView: {
+    screen: ComponentsScreen,
+    navigationOptions: {
+      title: 'Components',
       }
     },
-  }, {
+  
+  Profile: {
+      screen: ProfileScreen,
+      navigationOptions: {
+        title: 'Profile',
+        }
+      },
+  DevVersion: {
+        screen: DevVersionScreen,
+        navigationOptions: {
+          title: 'Developer License',
+          }
+        },
+  },{
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: 'blue',
@@ -116,6 +183,9 @@ const PagesStack = createStackNavigator({
     },
 });
 
+//END Stacks
+
+//Start Bottom Tabnavigator
 const TabNavigator = createBottomTabNavigator({
   Home: {
      screen: HomeStack,
@@ -132,13 +202,13 @@ const TabNavigator = createBottomTabNavigator({
      navigationOptions: { 
       title: 'Pages' }
   },
-  Gallery: {
-     screen: GalleryScreen,
+  Grid: {
+     screen: GridStack,
      navigationOptions: { 
-       title: 'Gallery' }
+       title: 'Grid' }
   },
   Components: {
-     screen: GalleryScreen,
+     screen: ComponentsStack,
      navigationOptions: { 
        title: 'Components' }
   },
@@ -153,19 +223,19 @@ const TabNavigator = createBottomTabNavigator({
         let iconName;
         if (routeName === 'Home') {
           iconName = `ios-home${focused ? '' : ''}`;
-        } else if (routeName === 'Gallery') {
-          iconName = `md-barcode`;
+        } else if (routeName === 'Components') {
+          iconName = `ios-keypad`;
         } else if (routeName === 'Calendar') {
           iconName = `ios-calendar${focused ? '' : ''}`;
         }
-        else if (routeName === 'Pages') {
+        else if (routeName === 'Grid') {
           iconName = `ios-grid${focused ? '' : ''}`;
         }
-        else if (routeName === 'Wetter') {
-          iconName = `ios-partly-sunny${focused ? '' : ''}`;
+        else if (routeName === 'Pages') {
+          iconName = `ios-copy${focused ? '' : ''}`;
         }
 
-        // You can return any component that you like here!
+        // Choose your favourite component here!
         return <IconComponent name={iconName} size={25} color={tintColor} />;
       },
     }),
@@ -188,21 +258,19 @@ const TabNavigator = createBottomTabNavigator({
     },
   }
 );
+//End Bottom Tabnavigator
+
+//Parent App Stack
 const AppStack = createStackNavigator({
   
   Home: {
-     screen: TabNavigator,
-     navigationOptions: {
-       headerShown: false
-     }
-    
+    screen: TabNavigator,
+    navigationOptions: {
+      headerShown: false
+    }
   },
-  
-},
- 
-  {
-    
-    initialRouteName: 'Home',
+}, {
+  initialRouteName: 'Home',
     /* The header config from HomeScreen is now here */
     defaultNavigationOptions: {
       headerStyle: {
@@ -215,14 +283,12 @@ const AppStack = createStackNavigator({
     },
 });
 
+//Export Complete Navigator
 export default createAppContainer( createSwitchNavigator(
 {
-    
-    App: AppStack,
-    Tabs: TabNavigator,
-    
-  },
-  {
-    initialRouteName: 'App',
+  App: AppStack,
+  Tabs: TabNavigator,
+  }, {
+  initialRouteName: 'App',
   }
 ));

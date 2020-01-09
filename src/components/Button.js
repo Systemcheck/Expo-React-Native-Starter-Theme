@@ -35,6 +35,9 @@ export default function RNSButton(props) {
       props.secondary && {
         borderColor: colors.secondary,
       },
+      props.gold && {
+        borderColor: colors.gold,
+      },
       props.bgColor && {
         borderColor: props.bgColor,
       },
@@ -86,6 +89,9 @@ export default function RNSButton(props) {
       gradientArray = [props.bgColor, props.bgColor];
     }
 
+    if (props.gold) {
+      gradientArray = [colors.goldGradientStart, colors.goldGradientStart];
+    }
     content = (
       <LinearGradient
         start={{ x: 0.5, y: 1 }}

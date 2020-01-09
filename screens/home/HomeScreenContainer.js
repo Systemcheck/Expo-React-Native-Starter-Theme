@@ -55,13 +55,12 @@ export default class HomeScreen extends Component {
     const im = 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/496ecb14589707.562865d064f9e.png';
    
     return ( 
-      <View style={styles.container}>
-        { !this.state.fontLoaded ?  null :  
+      
+         !this.state.fontLoaded ?  null :  
         <ImageBackground
-          source={colors.bg}
-          style={styles.MainContainer}
-          resizeMode="cover"
-        > 
+        source={colors.bg}
+        style={styles.container}
+      >
         
         <View style={styles.sectionLarge}>
           <Text size={30} bold white style={styles.title}>
@@ -117,7 +116,6 @@ export default class HomeScreen extends Component {
         <Button
           large
           secondary
-          
           rounded
           style={styles.button}
           caption="View all Pages"
@@ -126,28 +124,23 @@ export default class HomeScreen extends Component {
         </View>
       
        </ImageBackground>   
-       }
-      </View>
+       
+     
     
     );
   }
 }
 
 const styles = StyleSheet.create({
-  MainContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    opacity: 0.8,
-    top: -70,
-    height: '112%',
-    position: 'absolute',
-  },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
+    width: '100%',
+    opacity: 1,
+    top: -70,
+    height: '112%',
+    position: 'absolute',
   },
    submit:{
     marginRight:40,

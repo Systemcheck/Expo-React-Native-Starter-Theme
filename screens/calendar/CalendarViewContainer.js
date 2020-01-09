@@ -18,8 +18,8 @@ export default compose(
   ), lifecycle({
       async componentDidMount() {
         await Font.loadAsync({
-          'Lato-Regular': require('../../../assets/fonts/Lato-Regular.ttf'),
-          'Lato-Bold': require('../../../assets/fonts/Lato-Bold.ttf'),
+          'Lato-Regular': require('../../assets/fonts/Lato-Regular.ttf'),
+          'Lato-Bold': require('../../assets/fonts/Lato-Bold.ttf'),
         });
         this.setState({ fontLoaded: true });
         

@@ -9,11 +9,13 @@ import reducer from './reducer';
 const enhancers = [
   applyMiddleware(
     thunkMiddleware,
+    /* Data Console Logger
     createLogger({
-      collapsed: true,
+      collapsed: false,
       // eslint-disable-next-line no-undef
       predicate: () => __DEV__,
     }),
+    end logger */
   ),
 ];
 
@@ -34,5 +36,5 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);
-export const store = createStore(persistedReducer, {}, enhancer);
+export const store = createStore(persistedReducer, {}, enhancer); //
 export const persistor = persistStore(store);
