@@ -2,13 +2,13 @@ const stubImages = [
   {
     id: 0,
     link:
-      'https://s-media-cache-ak0.pinimg.com/736x/6d/68/e5/6d68e55c58127d5f8271dc40449e037d--baddie-natural-makeup-pretty-natural-makeup.jpg',
+      'https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     description: 'Test image in the grid',
   },
   {
     id: 1,
     link:
-      'https://i.pinimg.com/564x/b2/6c/dc/b26cdcc80ecc098df1e43fdb6e2a1b34.jpg',
+      'https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg',
     description: 'Test image in the grid',
   },
   {
@@ -26,7 +26,7 @@ const stubImages = [
   {
     id: 4,
     link:
-      'https://s-media-cache-ak0.pinimg.com/736x/6d/68/e5/6d68e55c58127d5f8271dc40449e037d--baddie-natural-makeup-pretty-natural-makeup.jpg',
+      'https://images.pexels.com/photos/556667/pexels-photo-556667.jpeg',
     description: 'Test image in the grid',
   },
   {
@@ -38,13 +38,13 @@ const stubImages = [
   {
     id: 6,
     link:
-      'https://pbs.twimg.com/profile_images/1642784826/pretty-girl-jessica-alba_422_8785.jpg',
+      'https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg',
     description: 'Test image in the grid',
   },
   {
     id: 7,
     link:
-      'https://pbs.twimg.com/profile_images/1642784826/pretty-girl-jessica-alba_422_8785.jpg',
+      'https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg',
     description: 'Test image in the grid',
   },
   {
@@ -62,13 +62,13 @@ const stubImages = [
   {
     id: 10,
     link:
-      'https://pbs.twimg.com/profile_images/1642784826/pretty-girl-jessica-alba_422_8785.jpg',
+      'https://images.pexels.com/photos/2495826/pexels-photo-2495826.jpeg',
     description: 'Test image in the grid',
   },
   {
     id: 11,
     link:
-      'https://pbs.twimg.com/profile_images/1642784826/pretty-girl-jessica-alba_422_8785.jpg',
+      'https://images.pexels.com/photos/847483/pexels-photo-847483.jpeg',
     description: 'Test image in the grid',
   },
 ];

@@ -7,7 +7,7 @@ function itemsLoaded(items) {
   };
 }
 
-const names = ['Max', 'Sarah', 'Andrea', 'Bettina', 'Mutti'];
+const names = ['Alicia', 'Sarah', 'Andrea', 'Samantha', 'Elaine'];
 const randomNumber = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 const labels = ['Urgent', 'Interview'];

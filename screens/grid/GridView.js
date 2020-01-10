@@ -14,6 +14,8 @@ import { colors, fonts } from '../../styles';
 import { RadioGroup, GridRow } from '../../components';
 
 export default class GridScreen extends React.Component {
+
+  
   _getRenderItemFunction = () =>
     [this.renderRowOne, this.renderRowTwo, this.renderRowThree][
       this.props.tabIndex
@@ -115,6 +117,8 @@ export default class GridScreen extends React.Component {
   );
 
   render() {
+    const { items, listData, loadItems, fontLoaded } = this.props;
+    console.log(listData);
     const groupedData =
       this.props.tabIndex === 0
         ? GridRow.groupByRows(this.props.data, 2)

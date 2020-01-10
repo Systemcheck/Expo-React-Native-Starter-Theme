@@ -9,13 +9,13 @@ import reducer from './reducer';
 const enhancers = [
   applyMiddleware(
     thunkMiddleware,
-    /* Data Console Logger
+    
     createLogger({
       collapsed: false,
       // eslint-disable-next-line no-undef
       predicate: () => __DEV__,
     }),
-    end logger */
+    
   ),
 ];
 
@@ -33,6 +33,7 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   blacklist: [],
+  whitelist: ['grid']
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);

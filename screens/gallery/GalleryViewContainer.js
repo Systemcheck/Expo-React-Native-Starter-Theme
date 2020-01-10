@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { compose, lifecycle } from 'recompose';
 
 import GalleryScreen from './GalleryView';
-import { loadImages, refreshImages } from './GalleryState';
+import { loadImages, refreshImages } from './GalleryData';
 
 export default compose(
   connect(

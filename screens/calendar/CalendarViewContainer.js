@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { compose, lifecycle } from 'recompose';
 
-import { loadItems } from './CalendarState';
+import { loadItems } from './CalendarData';
 
 import CalendarScreen from './CalendarView';
 import * as Font from 'expo-font';

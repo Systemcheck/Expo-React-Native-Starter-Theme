@@ -1,24 +1,32 @@
-
-
-import Navigator from "./navigation/Navigator";
-import React, { Component } from "react";
 import { Provider } from 'react-redux';
-import { ActivityIndicator, View, StyleSheet } from 'react-native';
-import { store, persistor } from './src/redux/store';
+import React from 'react';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { PersistGate } from 'redux-persist/integration/react';
 import { colors } from './styles';
 
-export default class App extends Component {
+import { store, persistor } from './src/redux/store';
+
+import AppView from './screens/AppViewContainer';
+
+
+export default function App() {
   
-  render() {
-    
-    return (
-      <Provider store={store}>
-        <Navigator  /> 
-      </Provider>
-    )
-   
-  }
+
+  return (
+    <Provider store={store}>
+      <PersistGate
+        loading={
+          // eslint-disable-next-line react/jsx-wrap-multilines
+          <View style={styles.container}>
+            <ActivityIndicator color={colors.red} />
+          </View>
+        }
+        persistor={persistor}
+      >
+        <AppView />
+      </PersistGate>
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({
